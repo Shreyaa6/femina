@@ -87,7 +87,15 @@
 
 .sizeGuideBtn {
   text-decoration: underline;
+  text-underline-offset: 3px;
   color: var(--color-gray);
+  font-family: var(--font-body);
+  font-size: inherit;
+  transition: color var(--transition-fast);
+}
+
+.sizeGuideBtn:hover {
+  color: var(--color-burgundy);
 }
 
 .sizeGrid {

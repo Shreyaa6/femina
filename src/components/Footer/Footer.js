@@ -1,13 +1,6 @@
+import Link from 'next/link';
+import { CONTACT } from '@/data/contact';
 import styles from './Footer.module.css';
-
-const CONTACT = {
-  location: 'Bagroy Market',
-  address: 'Main Road, Ranchi, Jharkhand 834001',
-  phone: '0651 233 1413',
-  phoneHref: 'tel:+916512331413',
-  mapsHref:
-    'https://www.google.com/maps/search/?api=1&query=Femina+Exclusif+Bagroy+Market+Main+Road+Ranchi+Jharkhand+834001',
-};
 
 export default function Footer() {
   return (
@@ -20,9 +13,15 @@ export default function Footer() {
         <div className={styles.links}>
           <div className={styles.column}>
             <h3>Shop</h3>
-            <a href="/products">Collections</a>
-            <a href="/products">New Arrivals</a>
-            <a href="/products">Best Sellers</a>
+            <Link href="/products">Collections</Link>
+            <Link href="/products">New Arrivals</Link>
+            <Link href="/products">Best Sellers</Link>
+          </div>
+          <div className={styles.column}>
+            <h3>Support</h3>
+            <Link href="/contact">Contact Us</Link>
+            <Link href="/size-guide">Size Guide</Link>
+            <Link href="/contact">Visit Boutique</Link>
           </div>
           <div className={styles.column}>
             <h3>Visit Us</h3>

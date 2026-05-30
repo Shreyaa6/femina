@@ -1,0 +1,230 @@
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: clamp(3rem, 8vw, 6rem) var(--padding-horizontal) clamp(4rem, 10vw, 8rem);
+  min-height: 70vh;
+  width: 100%;
+}
+
+.pageHeader {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto clamp(2.5rem, 6vw, 4rem);
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 300;
+  color: var(--color-burgundy);
+  margin-bottom: 1.25rem;
+}
+
+.intro {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  color: var(--color-gray);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.separator {
+  width: 80px;
+  height: 1px;
+  background-color: var(--color-burgundy);
+  opacity: 0.3;
+  margin: 2rem auto 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.infoCard,
+.formCard {
+  min-width: 0;
+}
+
+.goldFrame {
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  padding: clamp(2rem, 4vw, 3rem);
+  background-color: var(--color-ivory);
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 1.85rem);
+  font-weight: 400;
+  color: var(--color-burgundy);
+  margin-bottom: 2rem;
+}
+
+.detailBlock {
+  margin-bottom: 1.5rem;
+}
+
+.detailLabel {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-gold);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.detailBlock p {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-dark-gray);
+  line-height: 1.6;
+}
+
+.detailLink {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-burgundy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.detailLink:hover {
+  color: var(--color-burgundy-light);
+}
+
+.directionsBtn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.9rem 1.75rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-ivory);
+  background-color: var(--color-burgundy);
+  transition: background-color var(--transition-fast);
+}
+
+.directionsBtn:hover {
+  background-color: var(--color-burgundy-light);
+}
+
+.sizeGuideNote {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(197, 160, 89, 0.25);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-gray);
+}
+
+.inlineLink {
+  color: var(--color-burgundy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.formDesc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-gray);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.subjectSelect {
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+.subjectSelect .control {
+  width: 100%;
+  min-width: 0;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 1rem 1.15rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  border: 1px solid rgba(90, 0, 22, 0.15);
+  background-color: #faf9f5;
+  color: var(--color-black);
+  outline: none;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--color-burgundy);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 15px rgba(90, 0, 22, 0.04);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.formSuccess {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.formSuccess h3 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: var(--color-burgundy);
+  margin-bottom: 1rem;
+}
+
+.formSuccess p {
+  font-family: var(--font-body);
+  color: var(--color-gray);
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}

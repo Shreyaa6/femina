@@ -57,6 +57,9 @@ export default function Navbar() {
       <Link href="/products" className={styles.link} onClick={closeMenu}>
         Shop
       </Link>
+      <Link href="/contact" className={styles.link} onClick={closeMenu}>
+        Contact
+      </Link>
       <button
         type="button"
         onClick={() => {
@@ -82,6 +85,7 @@ export default function Navbar() {
         <div className={styles.container}>
           <div className={styles.desktopLeft}>
             <Link href="/products" className={styles.link}>Shop</Link>
+            <Link href="/contact" className={styles.link}>Contact</Link>
             <button
               type="button"
               onClick={() => setSearchOpen(true)}

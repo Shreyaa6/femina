@@ -58,7 +58,9 @@ export default function ProductDetail({ params }) {
           <div className={styles.sizeSection}>
             <div className={styles.sizeHeader}>
               <span>Select Size</span>
-              <button className={styles.sizeGuideBtn}>Size Guide</button>
+              <Link href="/size-guide" className={styles.sizeGuideBtn}>
+                Size Guide
+              </Link>
             </div>
             <div className={styles.sizeGrid}>
               {product.sizes.map(size => (
