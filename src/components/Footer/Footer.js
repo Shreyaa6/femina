@@ -1,5 +1,14 @@
 import styles from './Footer.module.css';
 
+const CONTACT = {
+  location: 'Bagroy Market',
+  address: 'Main Road, Ranchi, Jharkhand 834001',
+  phone: '0651 233 1413',
+  phoneHref: 'tel:+916512331413',
+  mapsHref:
+    'https://www.google.com/maps/search/?api=1&query=Femina+Exclusif+Bagroy+Market+Main+Road+Ranchi+Jharkhand+834001',
+};
+
 export default function Footer() {
   return (
     <footer className={styles.footer}>
@@ -16,10 +25,21 @@ export default function Footer() {
             <a href="/products">Best Sellers</a>
           </div>
           <div className={styles.column}>
-            <h3>Support</h3>
-            <a href="#">Contact Us</a>
-            <a href="#">Shipping & Returns</a>
-            <a href="#">FAQ</a>
+            <h3>Visit Us</h3>
+            <p className={styles.contactRow}>
+              <span className={styles.contactLabel}>Located in</span>
+              <a href={CONTACT.mapsHref} target="_blank" rel="noopener noreferrer">
+                {CONTACT.location}
+              </a>
+            </p>
+            <p className={styles.contactRow}>
+              <span className={styles.contactLabel}>Address</span>
+              <span>{CONTACT.address}</span>
+            </p>
+            <p className={styles.contactRow}>
+              <span className={styles.contactLabel}>Phone</span>
+              <a href={CONTACT.phoneHref}>{CONTACT.phone}</a>
+            </p>
           </div>
         </div>
       </div>

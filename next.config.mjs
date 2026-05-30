@@ -14,10 +14,8 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    turbopack: {
-      root: "/Users/shreyanarayani/Documents/Femina",
-    },
+  turbopack: {
+    root: "/Users/shreyanarayani/Documents/Femina",
   },
 };
 

@@ -49,6 +49,16 @@
   width: 100%;
 }
 
+@media (max-width: 480px) {
+  .button {
+    padding: 0.9rem 1.25rem;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 .button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
