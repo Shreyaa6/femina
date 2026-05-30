@@ -1,0 +1,137 @@
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem var(--padding-horizontal);
+  min-height: 80vh;
+}
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  gap: 2rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  background-color: #f5f5f5;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.breadcrumbs {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--color-gray);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.breadcrumbs a {
+  transition: color var(--transition-fast);
+}
+
+.breadcrumbs a:hover {
+  color: var(--color-burgundy);
+}
+
+.name {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: var(--color-gray);
+  margin-bottom: 3rem;
+  font-family: var(--font-body);
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-dark-gray);
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.sizeSection {
+  margin-bottom: 3rem;
+}
+
+.sizeHeader {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.sizeGuideBtn {
+  text-decoration: underline;
+  color: var(--color-gray);
+}
+
+.sizeGrid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.sizeOption {
+  border: 1px solid var(--color-light-gray);
+  padding: 0.8rem 1.5rem;
+  font-family: var(--font-body);
+  transition: all var(--transition-fast);
+}
+
+.sizeOption:hover, .sizeOption:focus {
+  border-color: var(--color-burgundy);
+  background-color: var(--color-burgundy);
+  color: var(--color-ivory);
+}
+
+.actions {
+  margin-bottom: 4rem;
+}
+
+.accordionItem {
+  border-bottom: 1px solid var(--color-light-gray);
+  padding: 1.5rem 0;
+}
+
+.accordionItem h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.accordionItem p {
+  color: var(--color-gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
